@@ -6,24 +6,36 @@ import NotePageNav from '../NotePageNav/NotePageNav';
 import NoteListMain from '../NoteListMain/NoteListMain';
 import NotePageMain from '../NotePageMain/NotePageMain';
 import Context from '../Context';
-import dummyStore from '../dummy-store';
+import config from '../config';
 import './App.css';
 
 class App extends Component {
     state = {
-        notes: dummyStore.notes,
-        folders: dummyStore.folders
+        notes: [],
+        folders: []
     };
 
-    // componentDidMount() {
-    //     fetch(config.APIendpoint, 
-    //         {method: ,
-    //         headers: {}
-    //     }
+    componentDidMount() {
+        Promise.all([
+            fetch(`${config.API_ENDPOINT}/notes`),
+            fetch(`${config.API_ENDPOINT}/folders`)
+        ])
+            .then(([notesRes, foldersRes]) => {
+                if (!notesRes.ok)
+                    return notesRes.json().then(e => Promise.reject(e));
+                if (!foldersRes.ok)
+                    return foldersRes.json().then(e => Promise.reject(e));
 
-
-    //         )
-    // }
+                return Promise.all([notesRes.json(), foldersRes.json()]);
+            })
+            .then(([notes, folders]) => {
+                console.log([notes, folders]);
+                this.setState({ notes, folders });
+            })
+            .catch(error => {
+                console.error({ error });
+            });
+    }
 
     handleDeleteNote = noteId => {
         this.setState({
@@ -54,7 +66,6 @@ class App extends Component {
     }
 
     renderMainRoutes() {
-        //  const { notes, folders } = this.state;
         return (
             <>
                 {['/', '/folder/:folderId'].map(path => (
@@ -65,7 +76,6 @@ class App extends Component {
                         component={NoteListMain}
                     />
                 ))}
-
                 <Route
                     path="/note/:noteId"
                     component={NotePageMain}

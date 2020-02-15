@@ -1,4 +1,4 @@
 export default {
-    API_ENDPOINT: `https:here`,
-    // API_KEY: 'my api key here',
-  }
+  API_ENDPOINT: `http://localhost:9090`,
+  // API_KEY: 'api key here if needed',
+}

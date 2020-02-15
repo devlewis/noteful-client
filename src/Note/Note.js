@@ -3,10 +3,38 @@ import { Link } from 'react-router-dom'
 import { format } from 'date-fns'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import Context from '../Context';
+import config from '../config';
 import './Note.css'
 
 export default class Note extends React.Component {
   static contextType = Context;
+
+  handleClickDelete = e => {
+    e.preventDefault()
+    const noteId = this.props.id
+
+    fetch(`${config.API_ENDPOINT}/notes/${noteId}`, {
+      method: 'DELETE',
+      headers: {
+        'content-type': 'application/json'
+      },
+    })
+      .then(res => {
+        if (!res.ok)
+          return res.json().then(e => Promise.reject(e))
+        return res.json()
+      })
+      .then(() => {
+        this.context.deleteNote(noteId)
+        // allow parent to perform extra behaviour ??
+        ////////where does this prop come from? 
+        ////////curriculum says to redirect after successful delete; where does that happen?
+        this.props.onDeleteNote(noteId)
+      })
+      .catch(error => {
+        console.error({ error })
+      })
+  }
 
   render() {
     return (
@@ -16,7 +44,9 @@ export default class Note extends React.Component {
             {this.props.name}
           </Link>
         </h2>
-        <button onClick={() => this.context.deleteNote(this.props.id)}
+        {/* before: 
+        <button onClick={() => this.handleClickDelete} */}
+        <button onClick={this.handleClickDelete}
           className='Note__delete'
           type='button'>
           <FontAwesomeIcon icon='trash-alt' />
