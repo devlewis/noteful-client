@@ -10,15 +10,15 @@ import './NoteListMain.css'
 export default class NoteListMain extends React.Component {
   static defaultProps = {
     match: {
-      params: { }
+      params: {}
     }
   }
 
   static contextType = Context;
 
   render() {
-    const { folderId } = this.props.match.params; 
-    const notesForFolder = getNotesForFolder(this.context.folders, folderId);
+    const { folderId } = this.props.match.params;
+    const notesForFolder = getNotesForFolder(this.context.notes, folderId);
 
     return (
       <section className='NoteListMain'>

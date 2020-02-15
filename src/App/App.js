@@ -20,8 +20,8 @@ class App extends Component {
     //         {method: ,
     //         headers: {}
     //     }
-            
-            
+
+
     //         )
     // }
 
@@ -54,22 +54,21 @@ class App extends Component {
     }
 
     renderMainRoutes() {
-      //  const { notes, folders } = this.state;
+        //  const { notes, folders } = this.state;
         return (
             <>
                 {['/', '/folder/:folderId'].map(path => (
-                <Route
-                    exact
-                    key={path}
-                    path={path}
-                    component={NoteListMain}
-                />
+                    <Route
+                        exact
+                        key={path}
+                        path={path}
+                        component={NoteListMain}
+                    />
                 ))}
 
                 <Route
                     path="/note/:noteId"
-                    component={NotePageMain} 
-                    />;
+                    component={NotePageMain}
                 />
             </>
         );
@@ -81,17 +80,18 @@ class App extends Component {
             folders: this.state.folders,
             deleteNote: this.handleDeleteNote
         }
+        console.log(value.notes);
         return (
             <Context.Provider value={value}>
-            <div className="App">
-                <nav className="App__nav">{this.renderNavRoutes()}</nav>
-                <header className="App__header">
-                    <h1>
-                        <Link to="/">Noteful</Link>{' '}
-                        <FontAwesomeIcon icon="check-double" />
-                    </h1>
-                </header>
-                <main className="App__main">{this.renderMainRoutes()}</main>
+                <div className="App">
+                    <nav className="App__nav">{this.renderNavRoutes()}</nav>
+                    <header className="App__header">
+                        <h1>
+                            <Link to="/">Noteful</Link>{' '}
+                            <FontAwesomeIcon icon="check-double" />
+                        </h1>
+                    </header>
+                    <main className="App__main">{this.renderMainRoutes()}</main>
                 </div>
             </Context.Provider>
         );
