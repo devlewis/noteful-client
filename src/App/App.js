@@ -5,9 +5,12 @@ import NoteListNav from '../NoteListNav/NoteListNav';
 import NotePageNav from '../NotePageNav/NotePageNav';
 import NoteListMain from '../NoteListMain/NoteListMain';
 import NotePageMain from '../NotePageMain/NotePageMain';
+import AddFolder from '../AddFolder/AddFolder';
+import AddNote from '../AddNote/AddNote';
 import Context from '../Context';
 import config from '../config';
 import './App.css';
+import ErrorBoundary from '../ErrorBoundary';
 
 class App extends Component {
     state = {
@@ -29,7 +32,6 @@ class App extends Component {
                 return Promise.all([notesRes.json(), foldersRes.json()]);
             })
             .then(([notes, folders]) => {
-                console.log([notes, folders]);
                 this.setState({ notes, folders });
             })
             .catch(error => {
@@ -41,7 +43,18 @@ class App extends Component {
         this.setState({
             notes: this.state.notes.filter(note => note.id !== noteId)
         })
+    }
 
+    handleAddFolder = folderNew => {
+        this.setState({
+            folders: [...this.state.folders, folderNew]
+        })
+    }
+
+    handleAddNote = noteNew => {
+        this.setState({
+            notes: [...this.state.notes, noteNew]
+        })
     }
 
     renderNavRoutes() {
@@ -59,8 +72,8 @@ class App extends Component {
                     path="/note/:noteId"
                     component={NotePageNav}
                 />
-                <Route path="/add-folder" component={NotePageNav} />
-                <Route path="/add-note" component={NotePageNav} />
+                <Route path="/add-folder" component={AddFolder} />
+                <Route path="/add-note" component={AddNote} />
             </>
         );
     }
@@ -88,13 +101,17 @@ class App extends Component {
         const value = {
             notes: this.state.notes,
             folders: this.state.folders,
-            deleteNote: this.handleDeleteNote
+            deleteNote: this.handleDeleteNote,
+            addFolder: this.handleAddFolder,
+            addNote: this.handleAddNote
         }
-        console.log(value.notes);
+
         return (
             <Context.Provider value={value}>
                 <div className="App">
-                    <nav className="App__nav">{this.renderNavRoutes()}</nav>
+                    <ErrorBoundary>
+                        <nav className="App__nav">{this.renderNavRoutes()}</nav>
+                    </ErrorBoundary>
                     <header className="App__header">
                         <h1>
                             <Link to="/">Noteful</Link>{' '}

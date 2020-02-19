@@ -7,6 +7,9 @@ import config from '../config';
 import './Note.css'
 
 export default class Note extends React.Component {
+  static defaultProps = {
+    onDeleteNote: () => { }
+  }
   static contextType = Context;
 
   handleClickDelete = e => {
@@ -26,9 +29,6 @@ export default class Note extends React.Component {
       })
       .then(() => {
         this.context.deleteNote(noteId)
-        // allow parent to perform extra behaviour ??
-        ////////where does this prop come from? 
-        ////////curriculum says to redirect after successful delete; where does that happen?
         this.props.onDeleteNote(noteId)
       })
       .catch(error => {
@@ -37,16 +37,16 @@ export default class Note extends React.Component {
   }
 
   render() {
+    const { name, id, modified } = this.props
     return (
       <div className='Note'>
         <h2 className='Note__title'>
-          <Link to={`/note/${this.props.id}`}>
-            {this.props.name}
+          <Link to={`/note/${id}`}>
+            {name}
           </Link>
         </h2>
-        {/* before: 
-        <button onClick={() => this.handleClickDelete} */}
-        <button onClick={this.handleClickDelete}
+        <button
+          onClick={this.handleClickDelete}
           className='Note__delete'
           type='button'>
           <FontAwesomeIcon icon='trash-alt' />
@@ -58,7 +58,7 @@ export default class Note extends React.Component {
             Modified
           {' '}
             <span className='Date'>
-              {format(this.props.modified, 'Do MMM YYYY')}
+              {format(modified, 'Do MMM YYYY')}
             </span>
           </div>
         </div>
