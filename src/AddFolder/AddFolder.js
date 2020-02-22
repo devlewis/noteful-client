@@ -66,10 +66,11 @@ class AddFolder extends React.Component {
                             name="folderName"
                             id="folderName"
                             placeholder="folder name here"
+                            autocomplete="off"
                             required />
                     </div>
                     <div className="AddFolder_buttons">
-                        <button type="button" onClick={this.handleClickCancel}>
+                        <button className="Cancel" type="button" onClick={this.handleClickCancel}>
                             Cancel
                         </button>
                         {''}

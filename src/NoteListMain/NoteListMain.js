@@ -1,18 +1,19 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import Note from '../Note/Note'
-import CircleButton from '../CircleButton/CircleButton'
-import { getNotesForFolder } from '../notes-helpers'
-import Context from '../Context'
-import './NoteListMain.css'
+import React from "react";
+import { Link } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import Note from "../Note/Note";
+import CircleButton from "../CircleButton/CircleButton";
+import { getNotesForFolder } from "../notes-helpers";
+import Context from "../Context";
+import PropTypes from "prop-types";
+import "./NoteListMain.css";
 
 export default class NoteListMain extends React.Component {
   static defaultProps = {
     match: {
       params: {}
     }
-  }
+  };
 
   static contextType = Context;
 
@@ -22,31 +23,37 @@ export default class NoteListMain extends React.Component {
     const notesForFolder = getNotesForFolder(notes, folderId);
 
     return (
-      <section className='NoteListMain'>
-        <ul>
-          {notesForFolder.map(note =>
+      <section className="NoteListMain">
+        <ul tabIndex="0">
+          {notesForFolder.map(note => (
             <li key={note.id}>
-              <Note
-                id={note.id}
-                name={note.name}
-                modified={note.modified}
-              />
+              <Note id={note.id} name={note.name} modified={note.modified} />
             </li>
-          )}
+          ))}
         </ul>
-        <div className='NoteListMain__button-container'>
+        <div className="NoteListMain__button-container">
           <CircleButton
+            tabIndex="1"
             tag={Link}
-            to='/add-note'
-            type='button'
-            className='NoteListMain__add-note-button'
+            to="/add-note"
+            type="button"
+            className="NoteListMain__add-note-button"
           >
-            <FontAwesomeIcon icon='plus' />
+            <FontAwesomeIcon icon="plus" />
             <br />
             Note
-        </CircleButton>
+          </CircleButton>
         </div>
       </section>
-    )
+    );
   }
 }
+
+NoteListMain.propTypes = {
+  match: PropTypes.shape({
+    isExact: PropTypes.bool,
+    params: PropTypes.object,
+    path: PropTypes.string,
+    url: PropTypes.string
+  })
+};

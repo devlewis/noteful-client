@@ -1,0 +1,52 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AddFolder component renders without error 1`] = `
+<section
+  className="AddFolder"
+>
+  <h2>
+    Create a folder
+  </h2>
+  <form
+    className="AddFolder_form"
+    onSubmit={[Function]}
+  >
+    <div
+      className="AddFolder_error"
+      role="alert"
+    />
+    <div>
+      <label
+        htmlFor="folderName"
+      >
+        Name 
+         
+      </label>
+      <input
+        autocomplete="off"
+        id="folderName"
+        name="folderName"
+        placeholder="folder name here"
+        required={true}
+        type="text"
+      />
+    </div>
+    <div
+      className="AddFolder_buttons"
+    >
+      <button
+        className="Cancel"
+        onClick={[Function]}
+        type="button"
+      >
+        Cancel
+      </button>
+      <button
+        type="submit"
+      >
+        Save
+      </button>
+    </div>
+  </form>
+</section>
+`;

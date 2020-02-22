@@ -2,6 +2,7 @@ import React from 'react'
 import Note from '../Note/Note'
 import Context from '../Context'
 import { findNote } from '../notes-helpers'
+import PropTypes from 'prop-types'
 import './NotePageMain.css'
 
 export default class NotePageMain extends React.Component {
@@ -39,3 +40,15 @@ export default class NotePageMain extends React.Component {
   }
 }
 
+NotePageMain.propTypes = {
+  history: PropTypes.object,
+
+  match: PropTypes.shape(
+    {
+      isExact: PropTypes.bool,
+      params: PropTypes.object,
+      path: PropTypes.string,
+      url: PropTypes.string
+    }
+  )
+}

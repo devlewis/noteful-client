@@ -1,0 +1,29 @@
+.AddNote {
+  margin-left: 10px;
+  color: white;
+}
+
+#name {
+  margin-bottom: 5px;
+}
+
+#content {
+  margin: 0 10px 10px 0;
+  width: 90%;
+  height: 50px;
+  resize: none;
+}
+
+select {
+  width: 200px;
+  font-size: 0.8em;
+}
+
+.AddNote_buttons {
+  margin-top: 10px;
+}
+
+button {
+  font-size: 0.8em;
+  margin-right: 10px;
+}
