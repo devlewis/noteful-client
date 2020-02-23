@@ -5,6 +5,8 @@ import Context from "../Context";
 import ValidationError from "../ValidationError";
 
 class AddNote extends React.Component {
+  static defaultProps = {};
+
   static contextType = Context;
 
   constructor(props) {
@@ -75,9 +77,11 @@ class AddNote extends React.Component {
 
     const { error } = this.state;
 
-    const folderName = this.context.folders.map(folder => (
-      <option value={folder.name}>{folder.name}</option>
-    ));
+    const folderName = this.context.folders
+      ? this.context.folders.map(folder => (
+          <option value={folder.name}>{folder.name}</option>
+        ))
+      : [];
 
     return (
       <section className="AddNote">

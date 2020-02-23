@@ -1,0 +1,942 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AddNote component renders without errors 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <AddNote
+    folderName={
+      Array [
+        <option
+          value="Important"
+        >
+          Important
+        </option>,
+        <option
+          value="Super"
+        >
+          Super
+        </option>,
+        <option
+          value="Spangley"
+        >
+          Spangley
+        </option>,
+      ]
+    }
+  />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "checkPropTypes": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <h2>
+          Create a Note
+        </h2>,
+        <form
+          className="AddNote_form"
+          onSubmit={[Function]}
+        >
+          <div
+            className="AddNote_error"
+            role="alert"
+          />
+          <div>
+            <label
+              htmlFor="name"
+            >
+              Note Name 
+            </label>
+            <input
+              autocomplete="off"
+              id="name"
+              name="name"
+              onChange={[Function]}
+              placeholder="name"
+              required={true}
+              type="text"
+            />
+          </div>
+          <div>
+            <label
+              htmlFor="content"
+            >
+              Content 
+            </label>
+            <textarea
+              autocomplete="off"
+              id="content"
+              name="content"
+              onChange={[Function]}
+              type="text"
+            />
+          </div>
+          <div>
+            <label
+              htmlFor="folderNameChoice"
+            >
+              Folder 
+            </label>
+            <select
+              id="folderNameChoice"
+              name="folderNameChoice"
+              onChange={[Function]}
+              required={true}
+            >
+              <option
+                value=""
+              >
+                Select a Folder
+              </option>
+            </select>
+          </div>
+          <div
+            className="AddNote_buttons"
+          >
+            <button
+              onClick={[Function]}
+              type="button"
+            >
+              Cancel
+            </button>
+            
+            <button
+              type="submit"
+            >
+              Save
+            </button>
+          </div>
+        </form>,
+      ],
+      "className": "AddNote",
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "Create a Note",
+        },
+        "ref": null,
+        "rendered": "Create a Note",
+        "type": "h2",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <div
+              className="AddNote_error"
+              role="alert"
+            />,
+            <div>
+              <label
+                htmlFor="name"
+              >
+                Note Name 
+              </label>
+              <input
+                autocomplete="off"
+                id="name"
+                name="name"
+                onChange={[Function]}
+                placeholder="name"
+                required={true}
+                type="text"
+              />
+            </div>,
+            <div>
+              <label
+                htmlFor="content"
+              >
+                Content 
+              </label>
+              <textarea
+                autocomplete="off"
+                id="content"
+                name="content"
+                onChange={[Function]}
+                type="text"
+              />
+            </div>,
+            <div>
+              <label
+                htmlFor="folderNameChoice"
+              >
+                Folder 
+              </label>
+              <select
+                id="folderNameChoice"
+                name="folderNameChoice"
+                onChange={[Function]}
+                required={true}
+              >
+                <option
+                  value=""
+                >
+                  Select a Folder
+                </option>
+              </select>
+            </div>,
+            <div
+              className="AddNote_buttons"
+            >
+              <button
+                onClick={[Function]}
+                type="button"
+              >
+                Cancel
+              </button>
+              
+              <button
+                type="submit"
+              >
+                Save
+              </button>
+            </div>,
+          ],
+          "className": "AddNote_form",
+          "onSubmit": [Function],
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": null,
+              "className": "AddNote_error",
+              "role": "alert",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "div",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <label
+                  htmlFor="name"
+                >
+                  Note Name 
+                </label>,
+                <input
+                  autocomplete="off"
+                  id="name"
+                  name="name"
+                  onChange={[Function]}
+                  placeholder="name"
+                  required={true}
+                  type="text"
+                />,
+                false,
+              ],
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "Note Name ",
+                  "htmlFor": "name",
+                },
+                "ref": null,
+                "rendered": "Note Name ",
+                "type": "label",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "autocomplete": "off",
+                  "id": "name",
+                  "name": "name",
+                  "onChange": [Function],
+                  "placeholder": "name",
+                  "required": true,
+                  "type": "text",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": "input",
+              },
+              false,
+            ],
+            "type": "div",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <label
+                  htmlFor="content"
+                >
+                  Content 
+                </label>,
+                <textarea
+                  autocomplete="off"
+                  id="content"
+                  name="content"
+                  onChange={[Function]}
+                  type="text"
+                />,
+              ],
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "Content ",
+                  "htmlFor": "content",
+                },
+                "ref": null,
+                "rendered": "Content ",
+                "type": "label",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "autocomplete": "off",
+                  "id": "content",
+                  "name": "content",
+                  "onChange": [Function],
+                  "type": "text",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": "textarea",
+              },
+            ],
+            "type": "div",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <label
+                  htmlFor="folderNameChoice"
+                >
+                  Folder 
+                </label>,
+                <select
+                  id="folderNameChoice"
+                  name="folderNameChoice"
+                  onChange={[Function]}
+                  required={true}
+                >
+                  <option
+                    value=""
+                  >
+                    Select a Folder
+                  </option>
+                </select>,
+              ],
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "Folder ",
+                  "htmlFor": "folderNameChoice",
+                },
+                "ref": null,
+                "rendered": "Folder ",
+                "type": "label",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": Array [
+                    <option
+                      value=""
+                    >
+                      Select a Folder
+                    </option>,
+                    Array [],
+                  ],
+                  "id": "folderNameChoice",
+                  "name": "folderNameChoice",
+                  "onChange": [Function],
+                  "required": true,
+                },
+                "ref": null,
+                "rendered": Array [
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": "Select a Folder",
+                      "value": "",
+                    },
+                    "ref": null,
+                    "rendered": "Select a Folder",
+                    "type": "option",
+                  },
+                ],
+                "type": "select",
+              },
+            ],
+            "type": "div",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <button
+                  onClick={[Function]}
+                  type="button"
+                >
+                  Cancel
+                </button>,
+                "",
+                <button
+                  type="submit"
+                >
+                  Save
+                </button>,
+              ],
+              "className": "AddNote_buttons",
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "Cancel",
+                  "onClick": [Function],
+                  "type": "button",
+                },
+                "ref": null,
+                "rendered": "Cancel",
+                "type": "button",
+              },
+              "",
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "Save",
+                  "type": "submit",
+                },
+                "ref": null,
+                "rendered": "Save",
+                "type": "button",
+              },
+            ],
+            "type": "div",
+          },
+        ],
+        "type": "form",
+      },
+    ],
+    "type": "section",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <h2>
+            Create a Note
+          </h2>,
+          <form
+            className="AddNote_form"
+            onSubmit={[Function]}
+          >
+            <div
+              className="AddNote_error"
+              role="alert"
+            />
+            <div>
+              <label
+                htmlFor="name"
+              >
+                Note Name 
+              </label>
+              <input
+                autocomplete="off"
+                id="name"
+                name="name"
+                onChange={[Function]}
+                placeholder="name"
+                required={true}
+                type="text"
+              />
+            </div>
+            <div>
+              <label
+                htmlFor="content"
+              >
+                Content 
+              </label>
+              <textarea
+                autocomplete="off"
+                id="content"
+                name="content"
+                onChange={[Function]}
+                type="text"
+              />
+            </div>
+            <div>
+              <label
+                htmlFor="folderNameChoice"
+              >
+                Folder 
+              </label>
+              <select
+                id="folderNameChoice"
+                name="folderNameChoice"
+                onChange={[Function]}
+                required={true}
+              >
+                <option
+                  value=""
+                >
+                  Select a Folder
+                </option>
+              </select>
+            </div>
+            <div
+              className="AddNote_buttons"
+            >
+              <button
+                onClick={[Function]}
+                type="button"
+              >
+                Cancel
+              </button>
+              
+              <button
+                type="submit"
+              >
+                Save
+              </button>
+            </div>
+          </form>,
+        ],
+        "className": "AddNote",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "Create a Note",
+          },
+          "ref": null,
+          "rendered": "Create a Note",
+          "type": "h2",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <div
+                className="AddNote_error"
+                role="alert"
+              />,
+              <div>
+                <label
+                  htmlFor="name"
+                >
+                  Note Name 
+                </label>
+                <input
+                  autocomplete="off"
+                  id="name"
+                  name="name"
+                  onChange={[Function]}
+                  placeholder="name"
+                  required={true}
+                  type="text"
+                />
+              </div>,
+              <div>
+                <label
+                  htmlFor="content"
+                >
+                  Content 
+                </label>
+                <textarea
+                  autocomplete="off"
+                  id="content"
+                  name="content"
+                  onChange={[Function]}
+                  type="text"
+                />
+              </div>,
+              <div>
+                <label
+                  htmlFor="folderNameChoice"
+                >
+                  Folder 
+                </label>
+                <select
+                  id="folderNameChoice"
+                  name="folderNameChoice"
+                  onChange={[Function]}
+                  required={true}
+                >
+                  <option
+                    value=""
+                  >
+                    Select a Folder
+                  </option>
+                </select>
+              </div>,
+              <div
+                className="AddNote_buttons"
+              >
+                <button
+                  onClick={[Function]}
+                  type="button"
+                >
+                  Cancel
+                </button>
+                
+                <button
+                  type="submit"
+                >
+                  Save
+                </button>
+              </div>,
+            ],
+            "className": "AddNote_form",
+            "onSubmit": [Function],
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": null,
+                "className": "AddNote_error",
+                "role": "alert",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "div",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <label
+                    htmlFor="name"
+                  >
+                    Note Name 
+                  </label>,
+                  <input
+                    autocomplete="off"
+                    id="name"
+                    name="name"
+                    onChange={[Function]}
+                    placeholder="name"
+                    required={true}
+                    type="text"
+                  />,
+                  false,
+                ],
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "Note Name ",
+                    "htmlFor": "name",
+                  },
+                  "ref": null,
+                  "rendered": "Note Name ",
+                  "type": "label",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "autocomplete": "off",
+                    "id": "name",
+                    "name": "name",
+                    "onChange": [Function],
+                    "placeholder": "name",
+                    "required": true,
+                    "type": "text",
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": "input",
+                },
+                false,
+              ],
+              "type": "div",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <label
+                    htmlFor="content"
+                  >
+                    Content 
+                  </label>,
+                  <textarea
+                    autocomplete="off"
+                    id="content"
+                    name="content"
+                    onChange={[Function]}
+                    type="text"
+                  />,
+                ],
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "Content ",
+                    "htmlFor": "content",
+                  },
+                  "ref": null,
+                  "rendered": "Content ",
+                  "type": "label",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "autocomplete": "off",
+                    "id": "content",
+                    "name": "content",
+                    "onChange": [Function],
+                    "type": "text",
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": "textarea",
+                },
+              ],
+              "type": "div",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <label
+                    htmlFor="folderNameChoice"
+                  >
+                    Folder 
+                  </label>,
+                  <select
+                    id="folderNameChoice"
+                    name="folderNameChoice"
+                    onChange={[Function]}
+                    required={true}
+                  >
+                    <option
+                      value=""
+                    >
+                      Select a Folder
+                    </option>
+                  </select>,
+                ],
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "Folder ",
+                    "htmlFor": "folderNameChoice",
+                  },
+                  "ref": null,
+                  "rendered": "Folder ",
+                  "type": "label",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": Array [
+                      <option
+                        value=""
+                      >
+                        Select a Folder
+                      </option>,
+                      Array [],
+                    ],
+                    "id": "folderNameChoice",
+                    "name": "folderNameChoice",
+                    "onChange": [Function],
+                    "required": true,
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": "Select a Folder",
+                        "value": "",
+                      },
+                      "ref": null,
+                      "rendered": "Select a Folder",
+                      "type": "option",
+                    },
+                  ],
+                  "type": "select",
+                },
+              ],
+              "type": "div",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <button
+                    onClick={[Function]}
+                    type="button"
+                  >
+                    Cancel
+                  </button>,
+                  "",
+                  <button
+                    type="submit"
+                  >
+                    Save
+                  </button>,
+                ],
+                "className": "AddNote_buttons",
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "Cancel",
+                    "onClick": [Function],
+                    "type": "button",
+                  },
+                  "ref": null,
+                  "rendered": "Cancel",
+                  "type": "button",
+                },
+                "",
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "Save",
+                    "type": "submit",
+                  },
+                  "ref": null,
+                  "rendered": "Save",
+                  "type": "button",
+                },
+              ],
+              "type": "div",
+            },
+          ],
+          "type": "form",
+        },
+      ],
+      "type": "section",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "legacyContextMode": "parent",
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getChildContext": Object {
+            "calledByRenderer": false,
+          },
+          "getDerivedStateFromError": true,
+          "getDerivedStateFromProps": Object {
+            "hasShouldComponentUpdateBug": false,
+          },
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+    Symbol(enzyme.__providerValues__): undefined,
+  },
+  Symbol(enzyme.__providerValues__): Map {},
+  Symbol(enzyme.__childContext__): null,
+}
+`;

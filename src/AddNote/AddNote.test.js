@@ -1,4 +1,5 @@
 import React from "react";
+import ReactDOM from "react-dom";
 import { shallow } from "enzyme";
 import toJson from "enzyme-to-json";
 import AddNote from "./AddNote";
@@ -18,9 +19,22 @@ let folders = [
   }
 ];
 
+let folderName = folders.map(folder => (
+  <option value={folder.name}>{folder.name}</option>
+));
+
+console.log("folderName", folderName);
+
+let addNoteWrapper = shallow(<AddNote folderName={folderName} />);
+
 describe(`AddNote component`, () => {
-  it("renders without error", () => {
-    const wrapper = shallow(<AddNote folderName={folders} />);
-    expect(toJson(wrapper)).toMatchSnapshot();
+  it("renders without errors", () => {
+    expect(addNoteWrapper).toMatchSnapshot();
+  });
+
+  it("renders folders we pass it", () => {
+    let options = addNoteWrapper.find("option");
+    console.log(options.debug());
+    expect(options).toHaveLength(4);
   });
 });
