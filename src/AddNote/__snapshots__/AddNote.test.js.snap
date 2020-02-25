@@ -3,27 +3,7 @@
 exports[`AddNote component renders without errors 1`] = `
 ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <AddNote
-    folderName={
-      Array [
-        <option
-          value="Important"
-        >
-          Important
-        </option>,
-        <option
-          value="Super"
-        >
-          Super
-        </option>,
-        <option
-          value="Spangley"
-        >
-          Spangley
-        </option>,
-      ]
-    }
-  />,
+  Symbol(enzyme.__unrendered__): <AddNote />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
     "checkPropTypes": [Function],

@@ -77,7 +77,7 @@ class AddNote extends React.Component {
 
     const { error } = this.state;
 
-    const folderName = this.context.folders
+    const folderNames = this.context.folders
       ? this.context.folders.map(folder => (
           <option value={folder.name}>{folder.name}</option>
         ))
@@ -131,7 +131,7 @@ class AddNote extends React.Component {
               required
             >
               <option value="">Select a Folder</option>
-              {folderName}
+              {folderNames}
             </select>
           </div>
           <div className="AddNote_buttons">
