@@ -76,10 +76,12 @@ class AddNote extends React.Component {
     const nameError = this.validateName();
 
     const { error } = this.state;
-
+    this.context;
     const folderNames = this.context.folders
       ? this.context.folders.map(folder => (
-          <option value={folder.name}>{folder.name}</option>
+          <option key={folder.id} value={folder.name}>
+            {folder.name}
+          </option>
         ))
       : [];
 
