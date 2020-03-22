@@ -43,7 +43,7 @@ class AddNote extends React.Component {
     let noteNew = {
       name: this.state.name.value,
       content: this.state.content,
-      folderId: folder.id
+      folderid: folder.id
     };
 
     fetch(`${config.API_ENDPOINT}/notes`, {
