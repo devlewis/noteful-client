@@ -1,3 +1,3 @@
 export default {
-  API_ENDPOINT: `http://localhost:8000/api/noteful`
+  API_ENDPOINT: `https://floating-inlet-56807.herokuapp.com/api/noteful`
 };
