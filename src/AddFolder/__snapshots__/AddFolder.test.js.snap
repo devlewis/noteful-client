@@ -23,7 +23,7 @@ exports[`AddFolder component renders without error 1`] = `
          
       </label>
       <input
-        autocomplete="off"
+        autoComplete="off"
         id="folderName"
         name="folderName"
         placeholder="folder name here"

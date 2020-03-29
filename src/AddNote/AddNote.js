@@ -107,7 +107,7 @@ class AddNote extends React.Component {
               name="name"
               id="name"
               placeholder="name"
-              autocomplete="off"
+              autoComplete="off"
               required
             />
             {this.state.name.touched && <ValidationError message={nameError} />}
@@ -119,7 +119,7 @@ class AddNote extends React.Component {
               type="text"
               name="content"
               id="content"
-              autocomplete="off"
+              autoComplete="off"
             />
           </div>
           <div>

@@ -61,7 +61,7 @@ class AddFolder extends React.Component {
               name="folderName"
               id="folderName"
               placeholder="folder name here"
-              autocomplete="off"
+              autoComplete="off"
               required
             />
           </div>
